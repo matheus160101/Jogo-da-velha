@@ -60,13 +60,16 @@ section .form button{
 }
 
 section .container .game{
-  width: 50%;
+  width: 100%;
   padding: 300px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 section .game .players{
   display: flex;
-  max-width: 50%;
+  width: 50%;
   height: 80px;
   background-color: white;
   margin-bottom: 50px;
@@ -105,4 +108,51 @@ section .game table tbody td{
 
 section .game table tbody td.win{
   background-color: #25a340;
+}
+
+
+@media screen and (max-width:1280px){
+    section{
+      overflow: auto;
+    }
+
+    section .container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  section .form{
+  padding: 0px 0px;
+}
+
+section .form .name input{
+  width: 100%;
+}
+
+  section .container .game{
+    width: 100%;
+    margin: 0 auto;
+    padding: 150px 0px; 
+    
+  }
+  
+
+}
+
+
+@media screen and (max-width:730px){
+  section .form{
+    width: 80%;
+  }
+
+  section .game .players{
+    width: 80%;
+  }
+
+  section .game table{
+    max-width: 80%;
+  }
 }
