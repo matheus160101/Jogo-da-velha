@@ -17,8 +17,18 @@ let turnPlayer = ''
 
 
 function updateTitle() {
-  const playerInput = document.getElementById(turnPlayer)
-  document.getElementById('turnPlayer').innerText = playerInput.value
+  if (turnPlayer == 'player1'){
+    document.getElementById("p1").style.color = "white";
+    document.getElementById("p2").style.color = "black";
+    document.getElementById("p2").style.background = "white";
+    document.getElementById("p1").style.background = "#84a5e4";
+
+  } else {
+    document.getElementById("p1").style.color = "black";
+    document.getElementById("p2").style.color = "white";
+    document.getElementById("p1").style.background = "white";
+    document.getElementById("p2").style.background = "#84a5e4";
+  }
 }
 
 function initializeGame() {
@@ -27,7 +37,7 @@ function initializeGame() {
   turnPlayer = 'player1'
   // Ajusta o título da página (caso seja necessário)
   document.querySelector(".game h2").innerHTML =
-    'Vez de: <span id="turnPlayer"></span>';
+    '<span id="turnPlayer"></span>';
   updateTitle()
   // Limpa o tabuleiro (caso seja necessário) e adiciona os eventos de clique
   boardRegions.forEach(function (element) {
